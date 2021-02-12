@@ -10,7 +10,8 @@
           <table>
         @endif
 
-                  <tr><td><a href="delete-categories.php?id={{ $category->id }}">удалить</td><td>{{ $category->title }}</td><td><a href="update-category.php?id={{ $category->id }}">изменить</td></tr>
+              <tr><td><form action="delete-categories.php" method="post"><input type="hidden" name="id" value="{{$category->id}}"><input type="submit" value="удалить"></form></td><td>{{ $category->title }}
+                  </td><td><form action="update-category.php" method="post"><input type="hidden" name="id" value="{{$category->id}}"><input type="submit" value="изменить"></form></td></tr>
 
         @if ($loop->last)
           </table>

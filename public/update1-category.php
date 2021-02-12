@@ -9,4 +9,4 @@ require_once '../config/blade.php';
 $categories = \Hillel\Model\Category::all();
 compact('categories'); // ['categories' => $categories]
 
-echo $blade->make('pages/update-category', ['categories' => $categories])->render();
+echo $blade->make('pages/update1-category', ['categories' => $categories])->render();

@@ -6,7 +6,7 @@ require_once '../config/blade.php';
 /** @var $blade */
 
 //
-$category = \Hillel\Model\Category::find($_GET['id']);
+$category = \Hillel\Model\Category::find($_POST['id']);
 echo $blade->make('pages/update-category',['category' => $category])->render();
 
 if(isset($_POST['update'])){

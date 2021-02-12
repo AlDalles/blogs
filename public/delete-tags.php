@@ -5,7 +5,7 @@ require_once '../config/blade.php';
 
 /** @var $blade */
 
-$tag = \Hillel\Model\Tag::find($_GET['id']);
+$tag = \Hillel\Model\Tag::find($_POST['id']);
 $tag->delete();
 echo $blade->make('pages/delete-tags',['tag' => $tag])->render();
 

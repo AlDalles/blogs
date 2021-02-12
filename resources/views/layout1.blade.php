@@ -57,6 +57,7 @@
                         <li><a class="dropdown-item" href="list-categories.php">Список категорий</a></li>
                         <li><a class="dropdown-item" href="delete1-categories.php">Удалить категорию</a></li>
                         <li><a class="dropdown-item" href="create-category.php">Добавить категорию</a></li>
+                        <li><a class="dropdown-item" href="update1-category.php">Изменить категорию</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -65,6 +66,7 @@
                         <li><a class="dropdown-item" href="list-tags.php">Список тегов</a></li>
                         <li><a class="dropdown-item" href="delete1-tags.php">Удалить тег</a></li>
                         <li><a class="dropdown-item" href="create-tag.php">Добавить тег</a></li>
+                        <li><a class="dropdown-item" href="update1-tag.php">Изменить тег</a></li>
                     </ul>
                 </li>
             </ul>

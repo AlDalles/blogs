@@ -1,17 +1,17 @@
 @extends('layout1')
 
-@section('title', 'Contacts')
+@section('title', 'Categories')
 
 @section('content')
 
 
 
-    <form action="#" method="post">
-        <select name = category size="1">
+    <form action="update-category.php" method="post">
+        <select name = id size="1">
 
 
         @forelse($categories as $category)
-                <option value={{ $category->id }}>{{ $category->title }}</option>
+                <option  value={{ $category->id }}>{{ $category->title }}</option>
 
              @empty
             <p>no categories</p>

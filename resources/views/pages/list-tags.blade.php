@@ -10,7 +10,8 @@
             <table>
                 @endif
 
-                <tr><td><a href="delete-tags.php?id={{ $tag->id }}">удалить</td><td>{{ $tag->title }}</td><td><a href="update-tag.php?id={{ $tag->id }}">изменить</td></tr>
+                <tr><td><form action="delete-tags.php" method="post"><input type="hidden" name="id" value="{{$tag->id}}"><input type="submit" value="удалить"></form></td><td>{{ $tag->title }}
+                    </td><td><form action="update-tag.php" method="post"><input type="hidden" name="id" value="{{$tag->id}}"><input type="submit" value="изменить"></form></td></tr>
 
                 @if ($loop->last)
             </table>

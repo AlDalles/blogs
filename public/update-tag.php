@@ -6,7 +6,7 @@ require_once '../config/blade.php';
 /** @var $blade */
 
 //
-$tag = \Hillel\Model\Tag::find($_GET['id']);
+$tag = \Hillel\Model\Tag::find($_POST['id']);
 echo $blade->make('pages/update-tag',['tag' => $tag])->render();
 
 if(isset($_POST['update'])){

@@ -9,7 +9,10 @@
     <form action="#" method="post">
         <p>Название категории<input name="title" value="{{$category->title}}">
         <p>Слаг для категории<input name="slug" value="{{$category->slug}}">
-        <p><input name ="update" type="submit" value="Update"><br>
+            <input type="hidden" name="id" value="{{$category->id}}">
+            <f><input name ="update" type="submit" value="Update"><br>
+
+    </form>
 
         <p><a href="list-categories.php">К списку категорий</a>>
 
