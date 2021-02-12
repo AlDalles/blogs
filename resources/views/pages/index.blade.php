@@ -3,7 +3,7 @@
 @section('title', 'Homepage')
 
 @section('content')
-    <h1>Homepage</h1>
+    <h1>Categories</h1>
 
     @forelse($categories as $category)
         @if ($loop->first)

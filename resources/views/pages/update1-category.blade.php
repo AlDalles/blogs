@@ -17,7 +17,9 @@
             <p>no categories</p>
         @endforelse
         </select>
+        <input name="marker" type="hidden" value="mark">
         <input name ="update" type="submit" value="select category"><br>
+    </form>>
 
 
 

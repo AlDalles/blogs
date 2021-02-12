@@ -9,6 +9,12 @@ require_once '../config/blade.php';
 $category = \Hillel\Model\Category::find($_POST['id']);
 echo $blade->make('pages/update-category',['category' => $category])->render();
 
+
+//да я знаю - єто КОСТЫЛЬ
+if(isset($_POST['marker'])){
+   exit;
+}
+
 if(isset($_POST['update'])){
 $category->title=$_POST['title'];
 $category->slug=$_POST['slug'];

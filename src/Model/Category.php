@@ -17,7 +17,7 @@ class Category extends Model
 {
 
     if ($this->id == 0) {
-        echo "You can't delete this speshial category";
+        echo "You can't delete this speshial category(Слющай ти самий умний, да ? нэлзя значыт НЭЛЗЯ!!!!)";
         return false;
     }
     \Hillel\Model\Post::where('category_id',$this->id)->update(['category_id' => 0]);
