@@ -10,11 +10,11 @@
             <hr>
         @endif
 
-        <p><H1>{{ $post->title }}</H1>></p>
-        <p><h3>category: {{$post->category->title}}</h3>></p>
-        <p>tags: {{$post->tagsAsString()}}</p>>
+        <p><H1>{{ $post->title }}</H1></p>
+        <p><h3>category: {{$post->category->title}}</h3></p>
+        <p>tags: {{$post->tagsAsString()}}</p>
         </br>
-        <p>{{$post->body}}</p>>
+        <p>{{$post->body}}</p>
         </br>
         @if ($loop->last)
             <hr>
