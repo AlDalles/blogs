@@ -78,7 +78,7 @@
     </div>
 </nav>
 
-<main class="container">
+<main class="container-md">
 
     <div class="starter-template text-center py-5 px-3">
         @yield('content')</div>

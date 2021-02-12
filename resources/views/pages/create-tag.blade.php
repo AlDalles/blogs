@@ -6,7 +6,7 @@
 
     <form class="form-text" action="#" method="post">
     Tag name <input name="tag" size="40"><br>
-    Tag slug <input name="slug" size="40"><br>
-    <input name ="submit" type="submit" value="save tag">
+    Tag slug <input name="slug" size="40"></br>
+    <input  name ="submit" type="submit" value="save tag">
     </form>
     @endsection
