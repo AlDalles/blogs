@@ -7,7 +7,7 @@
 
     @forelse($tags as $tag)
         @if ($loop->first)
-            <table>
+            <table class="table table-striped">
                 @endif
 
                 <tr><td>{{ $tag->title }}

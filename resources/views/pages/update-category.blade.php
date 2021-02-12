@@ -6,7 +6,7 @@
 
 
 
-    <form action="#" method="post">
+    <form class="form-text" action="#" method="post">
         <p>Название категории<input name="title" value="{{$category->title}}">
         <p>Слаг для категории<input name="slug" value="{{$category->slug}}">
             <input type="hidden" name="id" value="{{$category->id}}">

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <form action="#" method="post">
+    <form class="form-text" action="#" method="post">
         <p>Category name <input name="category" size="40"><br>
         <p>Category slug <input name="slug" size="40"><br>
         <p><input name ="submit" type="submit" value="save category">

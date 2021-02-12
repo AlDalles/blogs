@@ -7,7 +7,7 @@
 
     @forelse($categories as $category)
         @if ($loop->first)
-          <table>
+          <table  class="table table-striped">
         @endif
 
               <tr><td>{{ $category->title }}
