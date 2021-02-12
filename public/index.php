@@ -6,7 +6,6 @@ require_once '../config/blade.php';
 
 /** @var $blade */
 
-$categories = \Hillel\Model\Category::all();
-$tags = \Hillel\Model\Tag::all();
-compact('categories'); // ['categories' => $categories]
-echo $blade->make('pages/index', ['categories' => $categories,'tags' => $tags])->render();
+$posts = \Hillel\Model\Post::all();
+//compact('posts'); // ['posts' => $posts]
+echo $blade->make('pages/index', ['posts' => $posts])->render();

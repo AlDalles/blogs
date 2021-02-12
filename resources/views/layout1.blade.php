@@ -81,7 +81,7 @@
 <main class="container">
 
     <div class="starter-template text-center py-5 px-3">
-        @yield('content')</div>>
+        @yield('content')</div>
 
 
 </main><!-- /.container -->
