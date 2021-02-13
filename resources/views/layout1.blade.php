@@ -24,6 +24,10 @@
             user-select: none;
         }
 
+        .info {
+            padding-left: 20px;
+        }
+
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;

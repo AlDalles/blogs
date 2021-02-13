@@ -10,12 +10,12 @@ class Post extends Model
 {
     public function category()
     {
-        return $this->belongsTo(category::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function tags()
     {
-        return $this->belongsToMany(tag::class)->withTimestamps();
+        return $this->belongsToMany(Tag::class)->withTimestamps();
     }
     public function tagsAsString():string{
         $returnString ="";

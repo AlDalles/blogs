@@ -3,18 +3,24 @@
 @section('title', 'Homepage')
 
 @section('content')
-    <h1>Posts</h1>
+    <h1 class = "info">Posts</h1>
 
     @forelse($posts as $post)
         @if ($loop->first)
             <hr>
         @endif
 
-        <div class="text-white bg-dark"><p><H1>{{ $post->title }}</H1></p></div>
-        <div class="text-info bg-dark"><p><h3>category: {{$post->category->title}}</h3></p></div>
-        <div class="text-primary">><p>tags: {{$post->tagsAsString()}}</p></div>
+        <div class="text-white bg-dark info">
+            <h1>{{ $post->title }}</h1>
+        </div>
+        <div class="text-info bg-dark info">
+            <h3>category: {{$post->category->title}}</h3>
+        </div>
+        <div class="text-primary info">
+            <p>tags: {{$post->tagsAsString()}}</p>
+        </div>
         </br>
-        <p>{{$post->body}}</p>
+        <p class = "info">{{$post->body}}</p>
         </br>
         @if ($loop->last)
             <hr>

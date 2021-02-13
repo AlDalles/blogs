@@ -3,8 +3,10 @@
 @section('title', 'tags')
 
 @section('content')
-    <h1><p><a href="list-tags.php">К списку тегов</a>></h1>
-    select one or more tags for delete
+    <h1>
+        <a href="list-tags.php">К списку тегов</a>
+    </h1>
+
     <form method="post" action=#>
         <select name = "tags1[]" size={{$tags->count()}} multiple="multiple">
     @forelse($tags as $tag)
