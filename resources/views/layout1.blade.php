@@ -78,9 +78,9 @@
     </div>
 </nav>
 
-<main class="container-md">
+<main class="container">
 
-    <div class="starter-template text-center py-5 px-3">
+    <div class="w-80">
         @yield('content')</div>
 
 

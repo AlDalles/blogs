@@ -12,9 +12,9 @@
 
         <div class="text-white bg-dark"><p><H1>{{ $post->title }}</H1></p></div>
         <div class="text-info bg-dark"><p><h3>category: {{$post->category->title}}</h3></p></div>
-        <div class="text-primary">><p>tags: {{$post->tagsAsString()}}</p></div>
+        <div class="text-primary"><p>tags: {{$post->tagsAsString()}}</p></div>
         </br>
-        <p>{{$post->body}}</p>
+        <div "><p>{{$post->body}}</p></div>
         </br>
         @if ($loop->last)
             <hr>
