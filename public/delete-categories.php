@@ -7,5 +7,6 @@ require_once '../config/blade.php';
 
 $category = \Hillel\Model\Category::find($_POST['id']);
 $category->delete();
+header('location: list-categories.php');
 echo $blade->make('pages/delete-categories')->render();
 

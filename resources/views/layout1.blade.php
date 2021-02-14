@@ -73,6 +73,15 @@
                         <li><a class="dropdown-item" href="update1-tag.php">Изменить тег</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-expanded="false">Посты</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                        <li><a class="dropdown-item" href="list-posts.php">Список постов</a></li>
+                        <li><a class="dropdown-item" href="delete-post.php">Удалить пост</a></li>
+                        <li><a class="dropdown-item" href="create-post.php">Добавить пост</a></li>
+                        <li><a class="dropdown-item" href="update1-post.php">Изменить пост</a></li>
+                    </ul>
+                </li>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

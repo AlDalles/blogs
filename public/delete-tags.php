@@ -7,6 +7,7 @@ require_once '../config/blade.php';
 
 $tag = \Hillel\Model\Tag::find($_POST['id']);
 $tag->delete();
+header('location: list-tags.php');
 echo $blade->make('pages/delete-tags',['tag' => $tag])->render();
 
 

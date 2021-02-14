@@ -6,9 +6,9 @@ require_once '../config/blade.php';
 
 /** @var $blade */
 
-//
+
 $tags = \Hillel\Model\Tag::all();
 compact('tags'); // ['tags' => $tags]
 
 echo $blade->make('pages/list-tags', ['tags' => $tags])->render();
-//echo $blade->make('pages/contact')->render();
+

@@ -16,7 +16,7 @@ $tag->title= htmlspecialchars($_POST['tag']);
 $tag->slug=htmlspecialchars($_POST['slug']);
 $tag->save();
 echo "Tag ".$tag->title." was saved";
-
+    header('location: list-tags.php');
 
 }
 

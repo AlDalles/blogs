@@ -4,19 +4,15 @@ require_once '../config/eloquent.php';
 require_once '../config/blade.php';
 
 /** @var $blade */
-
-//
-{echo $blade->make('pages/create-category')->render();}
-
-
+$category = new \Hillel\Model\Category;
 if(isset($_POST['submit']))
 {
-$category = new \Hillel\Model\Category;
+
 $category->title= htmlspecialchars($_POST['category']);
 $category->slug=htmlspecialchars($_POST['slug']);
 $category->save();
-echo "Category ".$category->title." was saved";
-
+header('location: list-categories.php');
 
 }
+echo $blade->make('pages/create-category',['category' => $category])->render();
 
