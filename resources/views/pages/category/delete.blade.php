@@ -1,11 +1,11 @@
 @extends('layout1')
 
-@section('title', 'tags')
+@section('title', 'delete-category')
 
 @section('content')
-    <h1> <a href="list-categories.php">Список категорий</a></h1>
-    <form method="post" action=#>
-        <select name = "categories[]" size={{$categories->count()}} multiple="multiple">
+    <h1> Список категорий</h1>
+    <form method="get" action='delete_many'>
+        <select name = "categories_id[]" size={{$categories->count()}} multiple="multiple">
             @forelse($categories as $category)
 
 

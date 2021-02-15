@@ -27,7 +27,10 @@
         .info {
             padding-left: 20px;
         }
+        .info1 {
+            padding-top: 60px;
 
+        }
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -51,35 +54,35 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item active">
-                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
                 </li>
 
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Категории</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                        <li><a class="dropdown-item" href="list-categories.php">Список категорий</a></li>
-                        <li><a class="dropdown-item" href="delete1-categories.php">Удалить категорию</a></li>
-                        <li><a class="dropdown-item" href="create-category.php">Добавить категорию</a></li>
-                        <li><a class="dropdown-item" href="update1-category.php">Изменить категорию</a></li>
+                        <li><a class="dropdown-item" href="/category/list">Список категорий</a></li>
+                        <li><a class="dropdown-item" href="/category/delete1">Удалить категорию</a></li>
+                        <li><a class="dropdown-item" href="/category/create">Добавить категорию</a></li>
+                        <li><a class="dropdown-item" href="/category/update1">Изменить категорию</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-expanded="false">Теги</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown02">
-                        <li><a class="dropdown-item" href="list-tags.php">Список тегов</a></li>
-                        <li><a class="dropdown-item" href="delete1-tags.php">Удалить тег</a></li>
-                        <li><a class="dropdown-item" href="create-tag.php">Добавить тег</a></li>
-                        <li><a class="dropdown-item" href="update1-tag.php">Изменить тег</a></li>
+                        <li><a class="dropdown-item" href="/tag/list">Список тегов</a></li>
+                        <li><a class="dropdown-item" href="/tag/delete1">Удалить тег</a></li>
+                        <li><a class="dropdown-item" href="/tag/create">Добавить тег</a></li>
+                        <li><a class="dropdown-item" href="/tag/update1">Изменить тег</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-expanded="false">Посты</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown02">
-                        <li><a class="dropdown-item" href="list-posts.php">Список постов</a></li>
-                        <li><a class="dropdown-item" href="delete-post.php">Удалить пост</a></li>
-                        <li><a class="dropdown-item" href="create-post.php">Добавить пост</a></li>
-                        <li><a class="dropdown-item" href="update1-post.php">Изменить пост</a></li>
+                        <li><a class="dropdown-item" href="/post/list">Список постов</a></li>
+                        <li><a class="dropdown-item" href="#">Удалить пост</a></li>
+                        <li><a class="dropdown-item" href="#">Добавить пост</a></li>
+                        <li><a class="dropdown-item" href="#">Изменить пост</a></li>
                     </ul>
                 </li>
             </ul>
@@ -93,7 +96,7 @@
 
 <main class="container">
 
-    <div class="w-80">
+    <div class="info1">
         @yield('content')</div>
 
 

@@ -11,9 +11,9 @@
         @endif
 
               <tr><td>{{ $category->title }}
-                  </td><td><form action="update-category.php" method="post"><input type="hidden" name="id" value="{{$category->id}}">
-                          <input type="submit" value="изменить"></form></td><td><form action="delete-categories.php" method="post"><input type="hidden" name="id" value="{{$category->id}}">
-                          <input type="submit" value="удалить"></form></td></tr>
+                  </td><td><form action="/category/{{$category->id}}/delete" method="get">
+                          <input type="submit" value="удалить"></form></td><td><form action="/category/{{$category->id}}/update" method="get">
+                          <input type="submit" value="изменить"></form></td></tr>
 
         @if ($loop->last)
           </table>
