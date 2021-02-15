@@ -33,3 +33,5 @@
     @empty
         <p>no categories</p>
     @endforelse
+
+@endsection
