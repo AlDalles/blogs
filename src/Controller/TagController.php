@@ -36,7 +36,7 @@ class TagController
         $tag =  Tag::find($id);
         $tag->delete();
 
-        return new RedirectResponse('/');
+        return new RedirectResponse('/tag/list');
 
     }
     public function delete_many(){
@@ -49,7 +49,7 @@ class TagController
     public function destroy_many(){
         $data = request()->all();
        Tag::destroy($data[tags_id]);
-        return new RedirectResponse('/');
+        return new RedirectResponse('/tag/list');
     }
 
     public function edit($id){
@@ -70,7 +70,7 @@ class TagController
         $tag->title=$data['title'];
         $tag->slug=$data['slug'];
         $tag->save();
-        return new RedirectResponse('/');
+        return new RedirectResponse('/tag/list');
     }
 
     public function edit1()

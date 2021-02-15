@@ -27,7 +27,7 @@ class CategoryController
         $category->title=$data['title'];
         $category->slug=$data['slug'];
         $category->save();
-        return new RedirectResponse('/');
+        return new RedirectResponse('/category/list');
     }
 
 
@@ -36,7 +36,7 @@ class CategoryController
         $category =  Category::find($id);
         $category->delete();
 
-        return new RedirectResponse('/');
+        return new RedirectResponse('/category/list');
 
     }
     public function delete_many(){
@@ -71,7 +71,7 @@ class CategoryController
         $category->title=$data['title'];
         $category->slug=$data['slug'];
         $category->save();
-        return new RedirectResponse('/');
+        return new RedirectResponse('/category/list');
     }
 
     public function edit1()
