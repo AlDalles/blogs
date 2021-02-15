@@ -15,7 +15,7 @@ class TagController
     }
 
     public function create(){
-        $category = new Tag();
+        $tag = new Tag();
         return view('pages/tag/create',compact('tag'));
     }
 
@@ -27,7 +27,7 @@ class TagController
         $tag->title=$data['title'];
         $tag->slug=$data['slug'];
         $tag->save();
-        return new RedirectResponse('/');
+        return new RedirectResponse('/tag/list');
     }
 
 
