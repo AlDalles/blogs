@@ -35,7 +35,50 @@
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
+            body {
+                max-width: 450px;
+                margin:auto;
+                color: #fff;
+                background-color: rgb(71, 163, 218);
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            }
+            .container-form {
+                width: 100%;
+            }
+            .input-titel {
+                margin-bottom: 20px;
+            }
+            .form-textarea {
+                height: 100px;
+                margin-bottom: 20px;
+            }
+            .select-form {
+                margin-bottom: 20px;
+            }
+            .display-form {
+                display: block;
+                border-radius: 5px;
+                width: 100%;
+            }
+            .input-checkbox {
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .input-checkbox:last-child {
+                margin-bottom: 0;
+                color: rgb(255, 255, 255);
+                background-color: rgb(45, 101, 133);
+                border: 1px solid rgb(255, 255, 255);
+                width: 33%;
+                height: 25px;
+                border-radius: 5px;
+            }
+            .title {
+                text-align: center;
+            }
         }
+
     </style>
 
 
@@ -81,7 +124,7 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdown02">
                         <li><a class="dropdown-item" href="/post/list">Список постов</a></li>
                         <li><a class="dropdown-item" href="#">Удалить пост</a></li>
-                        <li><a class="dropdown-item" href="#">Добавить пост</a></li>
+                        <li><a class="dropdown-item" href="/post/create">Добавить пост</a></li>
                         <li><a class="dropdown-item" href="#">Изменить пост</a></li>
                     </ul>
                 </li>

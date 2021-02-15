@@ -50,7 +50,7 @@ class CategoryController
         $data = request()->all();
       //var_dump($data);
           Category::destroy($data[categories_id]);
-        return new RedirectResponse('/');
+        return new RedirectResponse('/category/list');
     }
 
     public function edit($id){
