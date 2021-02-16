@@ -27,6 +27,15 @@ class Post extends Model
     }
         return $returnString;
     }
+    public function tagsAsArea(){
+        $returnArea =array();
+        foreach ($tags = $this->tags as $tag){
+        $returnArea[] = $tag->id;
+
+        }
+       // var_dump($returnArea);
+        return $returnArea;
+    }
     public function delete()
     {
         $this->tags()->detach();

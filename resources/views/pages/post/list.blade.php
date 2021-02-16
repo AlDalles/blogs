@@ -17,6 +17,7 @@
 
         <div class="text-white bg-dark info">
             <h1>{{ $post->title }}</h1><a href="/post/{{$post->id}}/edit"  type="submit" >Редактировать</a>
+            <a href="/post/{{$post->id}}/delete"  type="submit" >Удалить</a>
         </div>
         <div class="text-info bg-dark info">
             <h3>category: {{$post->category->title}}</h3>

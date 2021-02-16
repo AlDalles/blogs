@@ -29,14 +29,17 @@ class PostController{
         $post->save();
             return new RedirectResponse('/post/list');
         }
-    /*public function update($id){
+   public function update($id){
         $data = request()->all();
-        $category =  Category::find($id);
-        $category->title=$data['title'];
-        $category->slug=$data['slug'];
-        $category->save();
-        return new RedirectResponse('/category/list');
-    }*/
+        $post =  Post::find($id);
+        $post->title=$data['title'];
+        $post->slug=$data['slug'];
+        $post->body=$data['body'];
+        $post->category_id=$data['category_id'];
+        $post->tags()->attach($data['tags_id']);
+        $post->save();
+        return new RedirectResponse('/post/list');
+    }
 
     public function edit($id){
         $post =  Post::find($id);
@@ -45,4 +48,15 @@ class PostController{
       return view('pages/post/edit',compact('post','categories','tags'));
 
     }
+
+    public function destroy($id){
+
+        $post =  Post::find($id);
+        $post->delete();
+
+        return new RedirectResponse('/post/list');
+
+    }
+
+
 }
