@@ -4,29 +4,49 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-4">
-                <h1>Добавить новый пост</h1></div></div>>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../views/resources/pages/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col title">
+            <h1>Добавить новый пост</h1>
+        </div>
+        <div class="col-4,info1" class ="container-form">
+            <form action="/post/create" name="main" method="post" class="form">
+                <h2 class="col-4,info1 title">Title</h2>
+                <input name="title" value="{{$post->title}}" class ="input-titel display-form">
+                <input name="slug" value="{{$post->slug}}" class ="input-titel display-form">
+                <textarea name="body" value="{{$post->body}}"class="form-textarea display-form"></textarea>
+                <select name="category_id" class ="select-form">
+                    @foreach($categories as $categoryforID)
+                        @if ($categoryforID->id==$post->$category_id)
 
+                        <option selected value="{{$categoryforID->id}}">{{$categoryforID->title}}</option>
 
-
-    <div> <form action="#" name="main" method="post">
-            <div>Title<input name="title" size="100"></div>
-            <div ><textarea name="body" cols="100"
-                            rows="35"></textarea></div>
-            <div><select name="id">
-                    @foreach($categories as $category){
-                    <option value="{{$category->id}}">{{$category->title}}</option>
-                    }@endforeach
-                </select></div>
-            <div>
-                @foreach($tags as $tag)
-                    <input type="checkbox" name="tags_id[]" value={{$tag->id}}>{{$tag->title}}
-            </div>
-            @endforeach
-            <div><input type="submit" name="save" value="Save"></div>
-        </form> </div>
-
+                            @else
+                                <option value="{{$categoryforID->id}}">{{$categoryforID->title}}</option>
+                        @endif
+                            @endforeach
+                </select>
+                <div>
+                    @foreach($post->tags as $tag)
+                        <input class = "input-checkbox" type="checkbox" name="tags_id[]" value={{$tag->id}}>{{$tag->title}}
+                    @endforeach
+                    <input class = "input-checkbox" type="submit" name="save" value="Save">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
 
 @endsection

@@ -57,3 +57,4 @@ $router->post('/tag/update','\Hillel\Controller\TagController@edit1'); // ред
 $router->get('/post/list','\Hillel\Controller\PostController@index');   //вывод постов
 $router->get('/post/create','\Hillel\Controller\PostController@create');
 $router->post('/post/create','\Hillel\Controller\PostController@store');
+$router->get('/post/{id}/edit','\Hillel\Controller\PostController@edit');

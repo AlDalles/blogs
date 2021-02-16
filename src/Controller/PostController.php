@@ -29,5 +29,20 @@ class PostController{
         $post->save();
             return new RedirectResponse('/post/list');
         }
+    /*public function update($id){
+        $data = request()->all();
+        $category =  Category::find($id);
+        $category->title=$data['title'];
+        $category->slug=$data['slug'];
+        $category->save();
+        return new RedirectResponse('/category/list');
+    }*/
 
+    public function edit($id){
+        $post =  Post::find($id);
+        $tags = Tag::all();
+        $categories = Category::all();
+      return view('pages/post/edit',compact('post','categories','tags'));
+
+    }
 }
