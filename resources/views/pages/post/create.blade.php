@@ -31,10 +31,13 @@
                     @endforeach
                 </select>
                 <div>
+
                     @foreach($tags as $tag)
+                        <div class="input-group">
                      <input class = "input-checkbox" type="checkbox" name="tags_id[]" value={{$tag->id}}>{{$tag->title}}
-                    @endforeach
-                    <input class = "input-checkbox" type="submit" name="save" value="Save">
+                        </div>
+                            @endforeach
+                        <input class = "input-checkbox submit-save" type="submit" name="save" value="Save">
                 </div>
             </form>
         </div>

@@ -38,13 +38,16 @@
                 </select>
                 <div>
                     @foreach($tags as $tag)
+                        <div class="input-group">
                         @if(array_search($tag->id,$post->tagsAsArea())!=false)
                         <input checked class = "input-checkbox" type="checkbox" name="tags_id[]" value={{$tag->id}}>{{$tag->title}}
                         @else
                             <input class = "input-checkbox" type="checkbox" name="tags_id[]" value={{$tag->id}}>{{$tag->title}}
                         @endif
+                        </div>
                     @endforeach
-                    <input class = "input-checkbox" type="submit" name="save" value="Save">
+                </div>
+                        <input class = "input-checkbox submit-save" type="submit" name="save" value="Save">
                 </div>
             </form>
         </div>

@@ -60,12 +60,18 @@
                 border-radius: 5px;
                 width: 100%;
             }
-            .input-checkbox {
-                display: block;
+            .input-group {   /*добавляем флекс для инпутов в родительский контейнер*/
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .input-checkbox { /*добавляем стили для инпутов*/
                 margin-bottom: 20px;
+                justify-content: baseline;
+                width: 20%;
             }
 
-            .input-checkbox:last-child {
+            .submit-save { /*добавляем стили для для кнопки*/
+                display: block;
                 margin-bottom: 0;
                 color: rgb(255, 255, 255);
                 background-color: rgb(45, 101, 133);
@@ -74,6 +80,7 @@
                 height: 25px;
                 border-radius: 5px;
             }
+
             .title {
                 text-align: center;
             }
